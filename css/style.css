@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #e74c3c;
+    --secondary-color: #f39c12;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+    background-color: #f5f5f5;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.main-card, .result-card, .about-card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: none;
+    margin-bottom: 20px;
+}
+
+.generate-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.generate-btn:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.name-card {
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.name-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.name-card .card-body {
+    padding: 15px;
+}
+
+.name-card .name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.name-card .meaning {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.name-card .source {
+    font-size: 0.8rem;
+    color: #999;
+    font-style: italic;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.favorite-btn:hover, .favorite-btn.active {
+    color: #f39c12;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .name-card .name {
+        font-size: 1.5rem;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.name-card {
+    animation: fadeIn 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.name-card:nth-child(1) { animation-delay: 0.1s; }
+.name-card:nth-child(2) { animation-delay: 0.2s; }
+.name-card:nth-child(3) { animation-delay: 0.3s; }
+.name-card:nth-child(4) { animation-delay: 0.4s; }
+.name-card:nth-child(5) { animation-delay: 0.5s; }
+.name-card:nth-child(6) { animation-delay: 0.6s; }

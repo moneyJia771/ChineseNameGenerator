@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中文取名神器</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-4">
+            <h1 class="title">中文取名神器</h1>
+            <p class="subtitle">为您的宝宝取一个寓意美好的中文名字</p>
+        </header>
+
+        <div class="card main-card">
+            <div class="card-body">
+                <form id="nameForm">
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">姓氏</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="请输入姓氏" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">性别</label>
+                        <div class="gender-selector">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+                                <label class="form-check-label" for="male">男孩</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                <label class="form-check-label" for="female">女孩</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">名字长度</label>
+                        <div class="name-length-selector">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="nameLength" id="oneChar" value="1" checked>
+                                <label class="form-check-label" for="oneChar">单字</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="nameLength" id="twoChars" value="2">
+                                <label class="form-check-label" for="twoChars">双字</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">名字风格</label>
+                        <select class="form-select" id="nameStyle">
+                            <option value="traditional">传统经典</option>
+                            <option value="modern">现代时尚</option>
+                            <option value="literary">文艺诗意</option>
+                            <option value="unique">独特少见</option>
+                        </select>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg generate-btn">生成名字</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card result-card mt-4 d-none">
+            <div class="card-body">
+                <h2 class="text-center mb-4">推荐名字</h2>
+                <div id="nameResults" class="row"></div>
+                <div class="text-center mt-3">
+                    <button id="regenerateBtn" class="btn btn-outline-primary">重新生成</button>
+                    <button id="shareBtn" class="btn btn-outline-success ms-2">分享结果</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card about-card mt-4">
+            <div class="card-body">
+                <h3>关于中文取名神器</h3>
+                <p>中文取名神器是一款专为中国父母设计的取名工具，结合传统文化与现代审美，为您的宝宝提供寓意美好的名字选择。</p>
+                <p>我们的名字库包含数千个精选汉字，每个名字都附带详细的含义解释和出处，帮助您了解名字背后的文化内涵。</p>
+            </div>
+        </div>
+
+        <footer class="text-center my-4">
+            <p>© 2024 中文取名神器 | 为爱而生</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/name-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
